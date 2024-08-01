@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               //   appbar
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Hello World',
+                        'Deliver to',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: AppColors.whiteColor,
@@ -55,10 +55,26 @@ class HomeScreen extends StatelessWidget {
                         image: DecorationImage(image: NetworkImage('https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg'), fit: BoxFit.cover)
                     ),
                   ),
-
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              //   title
+              const Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    'What would like\nto order',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 40,
+                      color: AppColors.whiteColor,
+                    ),
+                  )
                 ],
               )
-              //   title
               //   searchbar
               //   sliders
             ],
