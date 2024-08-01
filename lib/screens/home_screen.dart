@@ -27,6 +27,24 @@ class HomeScreen extends StatelessWidget {
                     child: Center(child: Icon(Icons.sort)),
                   ),
                   //   title
+                  const Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Hello World',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.whiteColor,
+                        ),
+                      ),
+                      Text(
+                        'Bangladesh',
+                        style: TextStyle(
+                          color: AppColors.primaryColor,
+                        ),
+                      )
+                    ],
+                  ),
                   //   profile image
                   Container(
                     height: 40,
@@ -37,6 +55,7 @@ class HomeScreen extends StatelessWidget {
                         image: DecorationImage(image: NetworkImage('https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg'), fit: BoxFit.cover)
                     ),
                   ),
+
                 ],
               )
               //   title
