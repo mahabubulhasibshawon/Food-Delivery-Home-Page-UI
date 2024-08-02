@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../components/food_store.dart';
 import 'package:food_delivery_ui/styles/app_colors.dart';
 import '../components/category_component.dart';
 import '../components/search_component.dart';
@@ -90,6 +91,8 @@ class HomeScreen extends StatelessWidget {
               //   sliders
               const SizedBox(height: 10,),
               const CategoryComponent(),
+              const SizedBox(height: 20,),
+              const FoodStore(),
             ],
           ),
         ),
