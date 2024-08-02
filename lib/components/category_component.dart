@@ -19,14 +19,6 @@ class CategoryComponent extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       mainAxisSize: MainAxisSize.min,
       children: [
-        // const Text(
-        //   'Fastest Delivery',
-        //   style: TextStyle(
-        //     fontWeight: FontWeight.bold,
-        //     fontSize: 25,
-        //     color: AppColors.whiteColor,
-        //   ),
-        // ),
       const SizedBox(height: 10,),
       //   slides
         SizedBox(
