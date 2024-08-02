@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_ui/styles/app_colors.dart';
+import '../components/search_component.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,12 +20,15 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   //   menu
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: AppColors.lightBackgroundColor,
-                      borderRadius: BorderRadius.circular(13)
-                    ),
-                    child: Center(child: Icon(Icons.sort)),
+                        color: AppColors.lightBackgroundColor,
+                        borderRadius: BorderRadius.circular(13)),
+                    child: const Center(
+                        child: Icon(
+                      Icons.sort,
+                      color: AppColors.whiteColor,
+                    )),
                   ),
                   //   title
                   const Column(
@@ -33,13 +37,14 @@ class HomeScreen extends StatelessWidget {
                       Text(
                         'Deliver to',
                         style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: AppColors.whiteColor,
+                          fontWeight: FontWeight.bold,
+                          color: AppColors.whiteColor,
                         ),
                       ),
                       Text(
                         'Bangladesh',
                         style: TextStyle(
+                          fontWeight: FontWeight.w500,
                           color: AppColors.primaryColor,
                         ),
                       )
@@ -52,8 +57,10 @@ class HomeScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: AppColors.lightBackgroundColor,
                         borderRadius: BorderRadius.circular(13),
-                        image: DecorationImage(image: NetworkImage('https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg'), fit: BoxFit.cover)
-                    ),
+                        image: const DecorationImage(
+                            image: NetworkImage(
+                                'https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg'),
+                            fit: BoxFit.cover)),
                   ),
                 ],
               ),
@@ -69,13 +76,15 @@ class HomeScreen extends StatelessWidget {
                     'What would like\nto order',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 40,
+                      fontSize: 30,
                       color: AppColors.whiteColor,
                     ),
                   )
                 ],
-              )
+              ),
+              const SizedBox(height: 10,),
               //   searchbar
+              const SearchComponent(),
               //   sliders
             ],
           ),
