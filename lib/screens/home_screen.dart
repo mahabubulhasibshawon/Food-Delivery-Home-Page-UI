@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_ui/styles/app_colors.dart';
+import '../components/category_component.dart';
 import '../components/search_component.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +14,7 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               //   appbar
               Row(
@@ -86,6 +88,8 @@ class HomeScreen extends StatelessWidget {
               //   searchbar
               const SearchComponent(),
               //   sliders
+              const SizedBox(height: 10,),
+              const CategoryComponent(),
             ],
           ),
         ),

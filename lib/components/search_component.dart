@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../styles/app_colors.dart';
 
 class SearchComponent extends StatelessWidget {
@@ -12,16 +11,32 @@ class SearchComponent extends StatelessWidget {
       
       children: [
         //   searchbar
-        const Expanded(
+        Expanded(
           child: TextField(
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search, color: AppColors.whiteColor,),
+              filled: true,
+              fillColor: AppColors.lightBackgroundColor,
+              prefixIcon: const Icon(Icons.search, color: AppColors.whiteColor,),
               hintText: 'Find for resturants or food...',
-              hintStyle: TextStyle(
+              hintStyle: const TextStyle(
                 fontWeight: FontWeight.w500,
                 color: Color(0xffb7b0b0),
               ),
-              border: OutlineInputBorder(),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(18),
+                borderSide: const BorderSide(
+                  width: 2,
+                  color: AppColors.whiteColor
+                )
+              ),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(18),
+                  borderSide: const BorderSide(
+                    color: AppColors.whiteColor,
+                    width: 2,
+                  )
+              ),
+               
             ),
           ),
         ),
